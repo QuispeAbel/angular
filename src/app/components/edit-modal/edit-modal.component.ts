@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MostrarModalService } from 'src/app/services/mostrar-modal.service';
 
 @Component({
   selector: 'app-edit-modal',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class EditModalComponent {
 
+  constructor(private _modal : MostrarModalService){
+
+  }
+
+  editar(){
+    
+  }
 }
