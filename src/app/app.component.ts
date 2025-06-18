@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MostrarModalService } from './services/mostrar-modal.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prueba';
+  
+    public mostrarModal$ : Observable<boolean>
+
+    constructor(private _modal : MostrarModalService){
+      this.mostrarModal$ = _modal.sharingObservable
+    }
+
+    
 }
