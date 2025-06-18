@@ -23,4 +23,11 @@ export class TaskComponent {
   //     console.log(this._modal.mostrarModal)
   //   }
 
+  editar(): void {
+    this._modal.sharingObservableSet(true);
+  }
+
+  cerrar(): void {
+    this._modal.sharingObservableSet(false);
+  }
 }

@@ -17,7 +17,7 @@ export class MostrarModalService {
     return this.sharingObservablePrivate.asObservable()
   }
 
-  set sharingObservableSet(valor : boolean){
+  sharingObservableSet(valor : boolean){
     this.sharingObservablePrivate.next(valor)
   }
 
