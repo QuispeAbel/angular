@@ -15,5 +15,8 @@ export class AppComponent {
       this.mostrarModal$ = _modal.sharingObservable
     }
 
+    agregarTarea(){
+      this._modal.sharingObservableSet(true);
+    }
     
 }

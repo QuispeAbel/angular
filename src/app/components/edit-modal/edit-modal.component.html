@@ -1,1 +1,21 @@
-<p>edit-modal works!</p>
+<div class="position-fixed top-0 start-0 w-100 h-100 bg-black bg-opacity-50 z-index-50 d-flex align-items-center justify-content-center p-4">
+    <div class="bg-white dark:bg-gray-800 rounded p-5" style="max-width: 28rem; width: 100%;">
+        <h1>Editar tarea</h1>
+        <form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Titulo</label>
+    <input type="text" class="form-control" id="titulo">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Subtitulo</label>
+    <input type="text" class="form-control" id="subtitle">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Descripcion</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</form>
+        <button (click)="cerrar()" type="button" class="btn btn-danger">CANCELAR</button>
+        <button (click)="editar()" type="button" class="btn btn-primary m-2">GUARDAR</button>
+    </div>
+</div>

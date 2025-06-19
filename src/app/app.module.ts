@@ -6,7 +6,6 @@ import { LogComponent } from './components/log/log.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TaskComponent } from './components/task/task.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
-import { TodoComponent } from './components/todo/todo.component';
 import { EditModalComponent } from './components/edit-modal/edit-modal.component';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { EditModalComponent } from './components/edit-modal/edit-modal.component
     LogComponent,
     TaskComponent,
     TaskListComponent,
-    TodoComponent,
     EditModalComponent
   ],
   imports: [

@@ -10,21 +10,18 @@ import { MostrarModalService } from 'src/app/services/mostrar-modal.service';
 
 export class TaskComponent {
 
-  //mostrar : boolean = false
-
   @Input() tarea? : Tarea = {titulo:'',subtitle: '',descripcion:''}
+
+  //@Output() edicion : EventEmitter<Tarea> = new EventEmitter<Tarea>
 
   constructor(private _modal : MostrarModalService){
 
   }
 
-  // editar(){
-  //     this._modal.mostrarModalfunc()
-  //     console.log(this._modal.mostrarModal)
-  //   }
-
   editar(): void {
     this._modal.sharingObservableSet(true);
+
+    //this.edicion.emit(this.tarea)
   }
 
   cerrar(): void {

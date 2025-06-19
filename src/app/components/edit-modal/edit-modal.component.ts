@@ -15,4 +15,9 @@ export class EditModalComponent {
   editar(){
     
   }
+
+  cerrar(){
+    this._modal.sharingObservableSet(false)
+  }
 }
+

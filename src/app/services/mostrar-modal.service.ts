@@ -21,7 +21,4 @@ export class MostrarModalService {
     this.sharingObservablePrivate.next(valor)
   }
 
-  // mostrarModalfunc(){
-  //   this.mostrarModal = !this.mostrarModal
-  // }
 }
