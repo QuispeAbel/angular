@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TaskComponent } from './components/task/task.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { EditModalComponent } from './components/edit-modal/edit-modal.component';
+import { FormatFechaPipe } from './pipes/format-fecha.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { EditModalComponent } from './components/edit-modal/edit-modal.component
     LogComponent,
     TaskComponent,
     TaskListComponent,
-    EditModalComponent
+    EditModalComponent,
+    FormatFechaPipe
   ],
   imports: [
     BrowserModule
