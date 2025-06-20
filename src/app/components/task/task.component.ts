@@ -10,7 +10,7 @@ import { MostrarModalService } from 'src/app/services/mostrar-modal.service';
 
 export class TaskComponent {
 
-  @Input() tarea? : Tarea = {titulo:'',subtitle: '',descripcion:''}
+  @Input() tarea? : Tarea = {id: null,titulo:'',fechaCreacion: '',descripcion:'',estado: null}
 
   //@Output() edicion : EventEmitter<Tarea> = new EventEmitter<Tarea>
 

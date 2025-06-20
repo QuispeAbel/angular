@@ -1,5 +1,9 @@
 export interface Tarea {
+    id: number | null,
     titulo: string,
-    subtitle: string,
+    fechaCreacion: Date | string,
     descripcion: string,
+    estado: TareaEstado | null,
 }
+
+export type TareaEstado = 'pendiente' | 'en progreso' | 'completada';
