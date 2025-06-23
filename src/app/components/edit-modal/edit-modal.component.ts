@@ -21,6 +21,7 @@ export class EditModalComponent {
     console.log(this.estado+this.description)
 
     this._todo.addTodo({id:Math.random() ,titulo:this.titulo,fechaCreacion: new Date(),descripcion:this.description,estado:this.estado})
+    this.cerrar()
     // this._todo.addTodo();
   }
 

@@ -17,10 +17,6 @@ export class TaskComponent {
 
   }
 
-  editar(): void {
-    this._modal.sharingObservableSet(true);
-  }
-
   cerrar(): void {
     this._modal.sharingObservableSet(false);
   }
