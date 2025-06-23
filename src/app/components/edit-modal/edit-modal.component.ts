@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MostrarModalService } from 'src/app/services/mostrar-modal.service';
+import { ToDoService } from 'src/app/services/to-do.service';
 
 @Component({
   selector: 'app-edit-modal',
@@ -8,12 +9,19 @@ import { MostrarModalService } from 'src/app/services/mostrar-modal.service';
 })
 export class EditModalComponent {
 
-  constructor(private _modal : MostrarModalService){
+  estado : string = 'pendiente'
+  description : string = ''
+  titulo : string = ''
+
+  constructor(private _modal : MostrarModalService, private _todo : ToDoService){
 
   }
 
-  editar(){
-    
+  crear(){
+    console.log(this.estado+this.description)
+
+    this._todo.addTodo({id:Math.random() ,titulo:this.titulo,fechaCreacion: new Date(),descripcion:this.description,estado:this.estado})
+    // this._todo.addTodo();
   }
 
   cerrar(){

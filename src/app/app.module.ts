@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { LogComponent } from './components/log/log.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TaskComponent } from './components/task/task.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { EditModalComponent } from './components/edit-modal/edit-modal.component';
 import { FormatFechaPipe } from './pipes/format-fecha.pipe';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +17,13 @@ import { FormatFechaPipe } from './pipes/format-fecha.pipe';
     TaskComponent,
     TaskListComponent,
     EditModalComponent,
-    FormatFechaPipe
+    FormatFechaPipe,
+    DropdownComponent
   ],
   imports: [
-    BrowserModule
-    ,
-    ReactiveFormsModule
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
