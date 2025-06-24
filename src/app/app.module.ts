@@ -9,6 +9,7 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 import { EditModalComponent } from './components/edit-modal/edit-modal.component';
 import { FormatFechaPipe } from './pipes/format-fecha.pipe';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
     TaskListComponent,
     EditModalComponent,
     FormatFechaPipe,
-    DropdownComponent
+    DropdownComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

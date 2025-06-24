@@ -29,4 +29,3 @@ export class EditModalComponent {
     this._modal.sharingObservableSet(false)
   }
 }
-
