@@ -1,8 +1,9 @@
 <div class="card m-2" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">{{tarea.titulo}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{tarea.fechaCreacion | formatFecha}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Creada: {{tarea.fechaCreacion | formatFecha}}</h6>
     <p class="card-text">{{tarea.descripcion}}</p>
+    <h6>Estado: {{tarea.estado}}</h6>
     <button (click)="echo()" type="button" class="btn btn-danger">Echo</button>
   </div>
 </div>

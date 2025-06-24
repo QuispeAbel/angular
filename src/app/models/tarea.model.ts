@@ -7,3 +7,7 @@ export interface Tarea {
 }
 
 export type TareaEstado = 'pendiente' | 'en progreso' | 'completada';
+
+export type FilterStatus = TareaEstado | 'all'
+
+export type Orders = 'newest' | 'oldest'

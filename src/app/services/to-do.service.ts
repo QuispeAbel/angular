@@ -6,9 +6,9 @@ const todoDefault : Tarea[] = [
       {id: 0,titulo:"Hacer tarea1",fechaCreacion:new Date(), descripcion:"hacer tarea de math", estado: 'pendiente'},
       {id: 2,titulo:"Hacer tarea2",fechaCreacion:new Date(), descripcion:"hacer tarea de X", estado: 'en progreso'},
       {id: 3,titulo:"Hacer tarea3",fechaCreacion:new Date(), descripcion:"hacer tarea de Y", estado: 'completada'},
-      {id: 0,titulo:"Hacer tarea1",fechaCreacion:new Date(), descripcion:"hacer tarea de math", estado: 'pendiente'},
-      {id: 2,titulo:"Hacer tarea2",fechaCreacion:new Date(), descripcion:"hacer tarea de X", estado: 'en progreso'},
-      {id: 3,titulo:"Hacer tarea3",fechaCreacion:new Date(), descripcion:"hacer tarea de Y", estado: 'completada'},
+      {id: 4,titulo:"Hacer tarea4",fechaCreacion:new Date(), descripcion:"hacer tarea de math", estado: 'pendiente'},
+      {id: 5,titulo:"Hacer tarea5",fechaCreacion:new Date(), descripcion:"hacer tarea de X", estado: 'en progreso'},
+      {id: 6,titulo:"Hacer tarea6",fechaCreacion:new Date(), descripcion:"hacer tarea de Y", estado: 'completada'},
     ]
 
 @Injectable({
