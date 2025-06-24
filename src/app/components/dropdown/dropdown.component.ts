@@ -11,6 +11,8 @@ export class DropdownComponent {
   @Input() optionSelected?: any;
   @Output() onSelect: EventEmitter<any> = new EventEmitter<any>();
 
+  public estado : string = '';
+
   public open: boolean = false;
 
   public toggleDropdown() {
@@ -20,5 +22,9 @@ export class DropdownComponent {
   public selectOption(option: any) {
     this.onSelect.emit(option);
     this.open = false;
+  }
+
+  mostrar(){
+    console.log(this.estado)
   }
 }

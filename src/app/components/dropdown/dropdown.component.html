@@ -1,26 +1,8 @@
-<div class="selectContainer">
-  <div (click)="toggleDropdown()" class="select">
-    <ng-container *ngIf="optionSelected?.name; else placeholderTemplate">
-      <p class="option-select">
-        <span>{{ optionSelected.name }}</span>
-      </p>
-    </ng-container>
-    <!-- <app-arrow [open]="open" /> -->
-  </div>
-
-  <div class="options" *ngIf="open">
-    <div
-      *ngFor="let option of options"
-      class="option"
-      (click)="selectOption(option)"
-    >
-      <span>
-        {{ option.name }}
-      </span>
-    </div>
-  </div>
-</div>
-
-<ng-template #placeholderTemplate>
-  <span class="withOpacity"> {{ placeholder }} </span>
-</ng-template>
+<div class="form-group">
+        <label for="Estado">Estado</label>
+        <select class="form-control" [(ngModel)] = "estado" name="estado">
+        <option value="pendiente" (click)="mostrar()">Pendiente</option>
+        <option value="en progreso">En progreso</option>
+        <option value="completada">Completada</option>
+        </select>
+      </div>
