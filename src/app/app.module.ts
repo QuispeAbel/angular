@@ -10,6 +10,7 @@ import { EditModalComponent } from './components/edit-modal/edit-modal.component
 import { FormatFechaPipe } from './pipes/format-fecha.pipe';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FilterComponent } from './components/filter/filter.component';
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

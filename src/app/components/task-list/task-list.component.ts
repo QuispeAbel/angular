@@ -9,6 +9,8 @@ import { Tarea } from 'src/app/models/tarea.model';
 
 export class TaskListComponent {
 
+  page !: number
+
   @Input() tareas : Tarea[] = [];
 
 
