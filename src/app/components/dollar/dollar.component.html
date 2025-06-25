@@ -1,5 +1,11 @@
 <div class="container border border-primary rounded p-3">
 
+    <!-- si toma .moneda -->
+
+    <div *ngFor="let valor of valores" class="card">{{valor.moneda}}</div>
+
+    <!-- no toma .moneda????????? -->
+
     <div class="row align-items-center">
         <div *ngFor="let valor of valores | slice:0:2" class="col card">{{valor | json}}</div>
     </div>
