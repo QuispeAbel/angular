@@ -26,7 +26,6 @@ export class EditModalComponent {
 
     this._todo.addTodo({id:Math.random() ,titulo:this.titulo,fechaCreacion: new Date(),descripcion:this.description,estado:this.estado})
     this.cerrar()
-    // this._todo.addTodo();
   }
 
   cerrar(){
@@ -35,7 +34,6 @@ export class EditModalComponent {
 
   cambiarEstado(estado: TareaEstado ) {
     this.estado = estado;
-    // console.log("llega" + estado );
   }
 
 }
