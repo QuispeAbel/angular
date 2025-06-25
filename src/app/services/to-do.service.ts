@@ -58,10 +58,6 @@ export class ToDoService {
     this.update()
   }
 
-  editTodo(todoId : Tarea['id']){
-
-  }
-
   private loadLocalStorage(){
     const storedTodos = localStorage.getItem('todos')
 
