@@ -11,6 +11,35 @@ import { FormatFechaPipe } from './pipes/format-fecha.pipe';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { TareasComponent } from './components/tareas/tareas.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ClimaComponent } from './components/clima/clima.component';
+import { DollarComponent } from './components/dollar/dollar.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+
+const routes: Routes = [
+  {
+    path:'',
+    component: TareasComponent
+  },
+  {
+    path:'tareas',
+    component: TareasComponent
+  },
+  {
+    path:'clima',
+    component: ClimaComponent
+  },
+  {
+    path:'dollar',
+    component: DollarComponent
+  },
+  {
+    path:'**',
+    component: NotFoundComponent
+  },
+]
 
 @NgModule({
   declarations: [
@@ -21,13 +50,17 @@ import { NgxPaginationModule } from 'ngx-pagination';
     EditModalComponent,
     FormatFechaPipe,
     DropdownComponent,
-    FilterComponent
+    FilterComponent,
+    TareasComponent,
+    NavbarComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
