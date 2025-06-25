@@ -1,1 +1,15 @@
-<p>dollar works!</p>
+<div class="container border border-primary rounded p-3">
+
+    <div class="row align-items-center">
+        <div *ngFor="let valor of valores | slice:0:2" class="col card">{{valor | json}}</div>
+    </div>
+
+    <div class="row align-items-center">
+        <div *ngFor="let valor of valores | slice:2:4" class="col card">{{valor | json}}</div>
+    </div>
+    <div class="row align-items-center">
+        <div *ngFor="let valor of valores | slice:4:6" class="col card">{{valor | json}}</div>
+    </div>
+
+
+</div>

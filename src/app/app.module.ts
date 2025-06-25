@@ -17,6 +17,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ClimaComponent } from './components/clima/clima.component';
 import { DollarComponent } from './components/dollar/dollar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import {HttpClientModule} from '@angular/common/http'
 
 const routes: Routes = [
   {
@@ -53,14 +54,17 @@ const routes: Routes = [
     FilterComponent,
     TareasComponent,
     NavbarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DollarComponent,
+    ClimaComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
