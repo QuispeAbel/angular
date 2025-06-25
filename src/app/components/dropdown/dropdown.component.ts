@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { formOptions } from 'src/app/config/options';
 
 @Component({
   selector: 'app-dropdown',
@@ -8,10 +9,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class DropdownComponent {
   @Input() placeholder?: string;
   @Input() options: any[] = [];
-  @Input() optionSelected?: any;
+  @Input() estado?: any;
   @Output() onSelect: EventEmitter<any> = new EventEmitter<any>();
 
-  public estado : string = '';
+  //public estado : string = '';
 
   public open: boolean = false;
 
@@ -25,6 +26,7 @@ export class DropdownComponent {
   }
 
   mostrar(){
-    console.log(this.estado)
+    console.log("estado en DD"+this.estado)
+    this.onSelect.emit(this.estado);
   }
 }

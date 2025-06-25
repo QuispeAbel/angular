@@ -1,8 +1,6 @@
 <div class="form-group">
         <label for="Estado">Estado</label>
-        <select class="form-control" [(ngModel)] = "estado" name="estado">
-        <option value="pendiente" (click)="mostrar()">Pendiente</option>
-        <option value="en progreso">En progreso</option>
-        <option value="completada">Completada</option>
+        <select class="form-control" [(ngModel)] = "estado" name="estado" (click)="mostrar()" >
+        <option *ngFor="let option of options" [value]="option.value" >{{ option.name }}</option>
         </select>
       </div>

@@ -3,7 +3,7 @@ export interface Tarea {
     titulo: string,
     fechaCreacion: Date | string,
     descripcion: string,
-    estado: string | null,
+    estado: string | null | TareaEstado,
 }
 
 export type TareaEstado = 'pendiente' | 'en progreso' | 'completada';

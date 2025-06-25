@@ -8,16 +8,18 @@
         <input type="text" class="form-control" id="titulo" [(ngModel)]="titulo" name="titulo">
       </div>
 
-      <app-dropdown/>
+      <app-dropdown
+        [options]="statusOptions"
+        (onSelect)="cambiarEstado($event)"/>
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="Estado">Estado</label>
         <select class="form-control" [(ngModel)] = "estado" name="estado">
         <option value="pendiente">Pendiente</option>
         <option value="en progreso">En progreso</option>
         <option value="completada">Completada</option>
         </select>
-      </div>
+      </div> -->
 
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Descripcion</label>

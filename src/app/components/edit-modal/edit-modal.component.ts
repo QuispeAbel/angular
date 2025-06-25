@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MostrarModalService } from 'src/app/services/mostrar-modal.service';
 import { ToDoService } from 'src/app/services/to-do.service';
+import { formOptions } from 'src/app/config/options';
+import { Tarea, TareaEstado } from 'src/app/models/tarea.model';
 
 @Component({
   selector: 'app-edit-modal',
@@ -9,9 +11,11 @@ import { ToDoService } from 'src/app/services/to-do.service';
 })
 export class EditModalComponent {
 
-  estado : string = 'pendiente'
+  estado : TareaEstado = 'pendiente'
   description : string = ''
   titulo : string = ''
+
+  public statusOptions = formOptions
 
   constructor(private _modal : MostrarModalService, private _todo : ToDoService){
 
@@ -28,4 +32,10 @@ export class EditModalComponent {
   cerrar(){
     this._modal.sharingObservableSet(false)
   }
+
+  cambiarEstado(estado: TareaEstado ) {
+    this.estado = estado;
+    // console.log("llega" + estado );
+  }
+
 }
