@@ -8,6 +8,7 @@
         <input type="text" class="form-control" id="titulo" [(ngModel)]="titulo" name="titulo">
       </div>
 
+      <label for="Estado">Estado</label>
       <app-dropdown
         [options]="statusOptions"
         (onSelect)="cambiarEstado($event)"/>

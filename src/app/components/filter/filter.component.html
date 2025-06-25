@@ -1,1 +1,14 @@
-<p>filter works!</p>
+<nav class="navbar navbar-light bg-light p-3">
+  <h2 class="navbar-text">
+    To - Do
+  </h2>
+  <div>
+    <span>
+        Filtrar por estado:
+    </span>
+    <app-dropdown
+    [options]="filterOptions"
+    (onSelect)="filtrar($event)">
+    </app-dropdown>
+  </div>
+</nav>

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Tarea } from '../models/tarea.model';
+import { FilterStatus, Tarea, TareaEstado } from '../models/tarea.model';
+import { filterOptions } from '../config/options';
 import { BehaviorSubject } from 'rxjs';
 
 const todoDefault : Tarea[] = [
@@ -19,12 +20,15 @@ export class ToDoService {
 
   constructor() { 
     this.loadLocalStorage()
-    this.update()
+    this.setFilter()
+    // this.update()
   }
   private todos : Tarea[] = todoDefault
   private sharingObservablePrivate: BehaviorSubject<Tarea[]> = 
       new BehaviorSubject<Tarea[]>(this.todos)
 
+  private observableFilter : BehaviorSubject<FilterStatus> = new BehaviorSubject<FilterStatus>('all')
+  
    get sharingObservable(){
     return this.sharingObservablePrivate.asObservable()
   }
@@ -32,6 +36,21 @@ export class ToDoService {
   removeTodo(todoId : Tarea['id']){
     this.todos = this.todos.filter( (todo) => todo.id !== todoId)
     this.update()
+  }
+
+  setFilter(){
+    this.observableFilter.subscribe((status)=>{
+      const filterTodos = status === 'all'?
+      this.todos:
+      this.todos.filter((todo)=>todo.estado == status)
+
+      this.sharingObservablePrivate.next(filterTodos)
+    })
+  }
+
+  filtrarPorEstado(value : FilterStatus){
+    this.observableFilter.next(value)
+    // return this.sharingObservablePrivate.asObservable
   }
 
   addTodo(newTarea : Tarea){
