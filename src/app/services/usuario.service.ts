@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { User } from '../models/user.model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import { User } from '../models/user.model';
 export class UsuarioService {
 
   
-  constructor() { }
+  constructor(private _router : Router) { }
 
   users : User[] = [{mail: 'admin@mail', pass: '1234'}]
 
@@ -22,6 +23,8 @@ export class UsuarioService {
     console.log(user)
     if(this.existUser(user)){
     this.logueado.next(true)
+    this._router.navigate(['/tareas'])
+
   }else{
       alert('usuario o contraseña icorrecta')
     }
