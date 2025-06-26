@@ -1,21 +1,40 @@
 <div class="container border border-primary rounded p-3">
 
-    <!-- si toma .moneda -->
-
-    <div *ngFor="let valor of valores" class="card">{{valor.moneda}}</div>
-
     <!-- no toma .moneda????????? -->
 
     <div class="row align-items-center">
-        <div *ngFor="let valor of valores | slice:0:2" class="col card">{{valor | json}}</div>
+        <div *ngFor="let valor of valores | slice:0:2" class="col card m-2">
+            <div class="card-body">
+                <h5 class="card-title">{{valor.casa}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Compra</h6>
+                <p class="card-text">{{valor.compra}}</p>
+                <h6 class="card-subtitle mb-2 text-muted">Compra</h6>
+                <p class="card-text">{{valor.venta}}</p>
+            </div>
+        </div>
     </div>
 
     <div class="row align-items-center">
-        <div *ngFor="let valor of valores | slice:2:4" class="col card">{{valor | json}}</div>
+        <div *ngFor="let valor of valores | slice:2:4" class="col card m-2">
+            <div class="card-body">
+                <h5 class="card-title">{{valor.casa}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Compra</h6>
+                <p class="card-text">{{valor.compra}}</p>
+                <h6 class="card-subtitle mb-2 text-muted">Compra</h6>
+                <p class="card-text">{{valor.venta}}</p>
+            </div>
+        </div>
     </div>
     <div class="row align-items-center">
-        <div *ngFor="let valor of valores | slice:4:6" class="col card">{{valor | json}}</div>
+        <div *ngFor="let valor of valores | slice:4:6" class="col card m-2">
+            <div class="card-body">
+                <h5 class="card-title">{{valor.casa}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Compra</h6>
+                <p class="card-text">{{valor.compra}}</p>
+                <h6 class="card-subtitle mb-2 text-muted">Compra</h6>
+                <p class="card-text">{{valor.venta}}</p>
+            </div>
+        </div>
     </div>
-
 
 </div>

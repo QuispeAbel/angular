@@ -9,12 +9,12 @@ import { Dollar } from 'src/app/models/dollar.model';
 })
 export class DollarComponent {
 
-  public valores ?: any
+  public valores ?: any[] = []
 
   constructor( private _httpClient : HttpClient){
 
     this._httpClient.get('https://dolarapi.com/v1/dolares').subscribe(
-      data => this.valores = data,
+      data => this.valores = Array.isArray(data) ? data : Object.values(data),
       err => console.log(err)
     )
 
