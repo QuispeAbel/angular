@@ -19,6 +19,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component'
 import { AuthGuard } from './guardiands/auth.guard';
+import { DetailsDollarComponent } from './components/details-dollar/details-dollar.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
     path:'dollar',
     component: DollarComponent,
     canActivate:[AuthGuard]
+  },{
+    path: 'dollar/:casa',
+    component: DetailsDollarComponent,
+    // canActivate: [AuthGuard]
   },
   {
     path:'**',
@@ -60,7 +65,8 @@ const routes: Routes = [
     NotFoundComponent,
     DollarComponent,
     ClimaComponent,
-    LoginComponent
+    LoginComponent,
+    DetailsDollarComponent
   ],
   imports: [
     BrowserModule,
