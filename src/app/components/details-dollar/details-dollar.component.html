@@ -1,6 +1,37 @@
-<p>casa {{(dollar$ | async)?.casa}}</p><br>
-<p>moneda {{(dollar$ | async)?.moneda}}</p><br>
-<p>nombre {{(dollar$ | async)?.nombre}}</p><br>
-<p>compra {{(dollar$ | async)?.compra}}</p><br>
-<p>venta {{(dollar$ | async)?.venta}}</p><br>
-<p>fechaActualizacion {{(dollar$ | async)?.fechaActualizacion}}</p><br>
+<div class="container mt-4">
+  <div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h5>Detalles del Dólar</h5>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th scope="row">Casa</th>
+            <td>{{ (dollar$ | async)?.casa }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Moneda</th>
+            <td>{{ (dollar$ | async)?.moneda }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Nombre</th>
+            <td>{{ (dollar$ | async)?.nombre }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Compra</th>
+            <td>{{ (dollar$ | async)?.compra }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Venta</th>
+            <td>{{ (dollar$ | async)?.venta }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Fecha de Actualización</th>
+            <td>{{ (dollar$ | async)?.fechaActualizacion }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
