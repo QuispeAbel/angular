@@ -1,23 +1,31 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Dollar } from 'src/app/models/dollar.model';
+import { DollarApiService } from 'src/app/services/dollar-api.service';
 
 @Component({
   selector: 'app-dollar',
   templateUrl: './dollar.component.html',
   styleUrls: ['./dollar.component.css']
 })
-export class DollarComponent {
+export class DollarComponent implements OnInit{
 
-  public valores ?: any[] = []
+  public valores$ !: Observable<Dollar[]>
+  private _api : DollarApiService
 
-  constructor( private _httpClient : HttpClient){
+  constructor(_api : DollarApiService, private _route : Router){
+    this._api = _api
+  }
 
-    this._httpClient.get('https://dolarapi.com/v1/dolares').subscribe(
-      data => this.valores = Array.isArray(data) ? data : Object.values(data),
-      err => console.log(err)
-    )
+  ngOnInit(): void {
+    this._api.getDollar()
+    this.valores$ = this._api._valores$
+  }
 
+  detalle( valor : Dollar){
+    console.log(valor.casa)
+    this._route.navigate(['dollar/'+ valor.casa])
   }
 
 }
