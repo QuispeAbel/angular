@@ -15,14 +15,12 @@ export class DetailsDollarComponent implements OnInit {
 
   dollar$ !: Observable<Dollar>
   constructor(private _ac: ActivatedRoute, private _api : DollarApiService) {
-
+    console.log(this._ac.snapshot.data)
+    this.dollar$ = this._ac.snapshot.data['casa']
   }
   ngOnInit(): void {
-    this._ac.paramMap.subscribe(params => {
-      this.casa = params.get('casa') || ''
-    })
-  
-    this.dollar$ = this._api.getDollarDetail(this.casa)
+    console.log(this.dollar$)
+    
   }
 
 

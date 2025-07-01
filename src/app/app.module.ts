@@ -20,6 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component'
 import { AuthGuard } from './guardiands/auth.guard';
 import { DetailsDollarComponent } from './components/details-dollar/details-dollar.component';
+import { DollarResolver } from './resolvers/dollar.resolver';
 
 const routes: Routes = [
   {
@@ -43,7 +44,10 @@ const routes: Routes = [
   },{
     path: 'dollar/:casa',
     component: DetailsDollarComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    resolve:{
+      casa : DollarResolver
+    }
   },
   {
     path:'**',
