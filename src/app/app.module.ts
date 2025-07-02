@@ -2,51 +2,22 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TaskComponent } from './components/task/task.component';
-import { TaskListComponent } from './components/task-list/task-list.component';
-import { EditModalComponent } from './components/edit-modal/edit-modal.component';
-import { FormatFechaPipe } from './pipes/format-fecha.pipe';
-import { DropdownComponent } from './components/dropdown/dropdown.component';
-import { FilterComponent } from './components/filter/filter.component';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { TareasComponent } from './components/tareas/tareas.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { RouterModule, Routes } from '@angular/router';
-import { ClimaComponent } from './components/clima/clima.component';
-import { DollarComponent } from './components/dollar/dollar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import {HttpClientModule} from '@angular/common/http';
-import { LoginComponent } from './components/login/login.component'
-import { AuthGuard } from './guardiands/auth.guard';
-import { DetailsDollarComponent } from './components/details-dollar/details-dollar.component';
-import { DollarResolver } from './resolvers/dollar.resolver';
-import { RoutingModule } from './modules/routing.module';
+import { RoutingModule } from './routing.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskComponent,
-    TaskListComponent,
-    EditModalComponent,
-    FormatFechaPipe,
-    DropdownComponent,
-    FilterComponent,
-    TareasComponent,
     NavbarComponent,
     NotFoundComponent,
-    DollarComponent,
-    ClimaComponent,
-    LoginComponent,
-    DetailsDollarComponent
+    
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
-    FormsModule,
-    NgxPaginationModule,
     RoutingModule,
     HttpClientModule,
   ],
