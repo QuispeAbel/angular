@@ -33,12 +33,10 @@ export class DollarApiService {
 
   getDollarDetail(casa : Dollar['casa']) : Observable<Dollar> {
 
-    this._http.get<Dollar>(`https://dolarapi.com/v1/dolares/${casa}`).subscribe(
-      data => this._dollarDetail.next(data),
-      err => console.log(err)
-    )
+    return this._http.get<Dollar>(`https://dolarapi.com/v1/dolares/${casa}`)
+    
 
-    return this._dollarDetail.asObservable()
+    //return this._dollarDetail.asObservable()
   }
 
 

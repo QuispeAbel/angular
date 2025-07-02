@@ -44,7 +44,7 @@ const routes: Routes = [
   },{
     path: 'dollar/:casa',
     component: DetailsDollarComponent,
-    canActivate: [AuthGuard],
+    //canActivate: [AuthGuard],
     resolve:{
       casa : DollarResolver
     }

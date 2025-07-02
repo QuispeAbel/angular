@@ -15,11 +15,13 @@ export class DetailsDollarComponent implements OnInit {
 
   dollar$ !: Observable<Dollar>
   constructor(private _ac: ActivatedRoute, private _api : DollarApiService) {
-    console.log(this._ac.snapshot.data)
+    // console.log(this._ac.snapshot.data['casa'])
     this.dollar$ = this._ac.snapshot.data['casa']
+    console.log("este es el dolar")
+    console.log(this.dollar$)
   }
   ngOnInit(): void {
-    console.log(this.dollar$)
+    //console.log(this.dollar$)
     
   }
 
