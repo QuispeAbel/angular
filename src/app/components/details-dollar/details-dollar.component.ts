@@ -13,7 +13,8 @@ export class DetailsDollarComponent implements OnInit {
 
   casa !: Dollar['casa']
 
-  dollar$ !: Observable<Dollar>
+  //dollar$ !: Observable<Dollar>
+  dollar$ !: Dollar
   constructor(private _ac: ActivatedRoute, private _api : DollarApiService) {
     // console.log(this._ac.snapshot.data['casa'])
     this.dollar$ = this._ac.snapshot.data['casa']

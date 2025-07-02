@@ -1,4 +1,4 @@
-{{dollar$ | json}}
+<!-- {{dollar$ | json}}
 <div class="container mt-4">
   <div class="card shadow-sm">
     <div class="card-header bg-primary text-white">
@@ -30,6 +30,44 @@
           <tr>
             <th scope="row">Fecha de Actualización</th>
             <td>{{ (dollar$ | async)?.fechaActualizacion }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> -->
+{{dollar$ | json}}
+<div class="container mt-4">
+  <div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h5>Detalles del Dólar</h5>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th scope="row">Casa</th>
+            <td>{{ dollar$.casa }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Moneda</th>
+            <td>{{ dollar$.moneda }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Nombre</th>
+            <td>{{ dollar$.nombre }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Compra</th>
+            <td>{{ dollar$.compra }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Venta</th>
+            <td>{{ dollar$.venta }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Fecha de Actualización</th>
+            <td>{{ dollar$.fechaActualizacion }}</td>
           </tr>
         </tbody>
       </table>

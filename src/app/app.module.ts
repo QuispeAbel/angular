@@ -21,39 +21,9 @@ import { LoginComponent } from './components/login/login.component'
 import { AuthGuard } from './guardiands/auth.guard';
 import { DetailsDollarComponent } from './components/details-dollar/details-dollar.component';
 import { DollarResolver } from './resolvers/dollar.resolver';
+import { RoutingModule } from './modules/routing.module';
 
-const routes: Routes = [
-  {
-    path:'',
-    component: LoginComponent
-  },
-  {
-    path:'tareas',
-    component: TareasComponent,
-    canActivate:[AuthGuard]
-  },
-  {
-    path:'clima',
-    component: ClimaComponent,
-    canActivate:[AuthGuard]
-  },
-  {
-    path:'dollar',
-    component: DollarComponent,
-    canActivate:[AuthGuard]
-  },{
-    path: 'dollar/:casa',
-    component: DetailsDollarComponent,
-    //canActivate: [AuthGuard],
-    resolve:{
-      casa : DollarResolver
-    }
-  },
-  {
-    path:'**',
-    component: NotFoundComponent
-  },
-]
+
 
 @NgModule({
   declarations: [
@@ -77,7 +47,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
-    RouterModule.forRoot(routes),
+    RoutingModule,
     HttpClientModule,
   ],
   providers: [],

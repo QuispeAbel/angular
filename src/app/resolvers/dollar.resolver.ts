@@ -18,8 +18,9 @@ export class DollarResolver implements Resolve<Observable<any>> {
     }
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Dollar> {
         this.casa = route.paramMap.get('casa') || ''
-        this.retorno = this._api.getDollarDetail(this.casa)
-        return this.retorno
+        return this._api.getDollarDetail(this.casa)
+        //this.retorno = this._api.getDollarDetail(this.casa)
+        //return this.retorno
     }
     
 }
